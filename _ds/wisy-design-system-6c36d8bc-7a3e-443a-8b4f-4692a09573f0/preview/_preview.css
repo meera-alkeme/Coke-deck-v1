@@ -1,0 +1,63 @@
+/* Shared frame for design-system preview cards.
+   Each card HTML imports colors_and_type.css + this file. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 28px 32px;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* utility row */
+.row    { display: flex; gap: 12px; align-items: center; }
+.col    { display: flex; flex-direction: column; gap: 8px; }
+.grow   { flex: 1; }
+.spacer { flex: 1; }
+
+/* Section kicker (mono caps) above a row of items, used sparingly inside cards */
+.k {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-weight: 500;
+}
+
+/* Swatch tile used in color cards */
+.swatch {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 14px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.swatch .name { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+.swatch .hex  { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; opacity: 0.85; }
+
+/* Generic small label */
+.lbl {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
